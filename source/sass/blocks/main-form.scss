@@ -11,6 +11,7 @@
 .main-form__wrapper {
   display: flex;
   flex-direction: column;
+  margin: 0 0 12px 0;
   padding: 16px;
   border: 1px solid var.$whisper;
   background-color: var.$white;
@@ -19,7 +20,7 @@
 
   @media (min-width: var.$tablet-width) {
     padding: 32px;
-    margin: -56px 0 0 0;
+    margin: -56px 0 48px 0;
   }
 }
 
@@ -62,6 +63,10 @@
   background-repeat: no-repeat;
   background-position: top 12px right 12px;
   background-size: 16px 16px;
+
+  option {
+    color: var.$black;
+  }
 }
 
 .main-form__button {
