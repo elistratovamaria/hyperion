@@ -19,7 +19,7 @@
 
     @media (min-resolution: 2dppx) {
       background-image: linear-gradient(90deg, rgba(var.$black, 0.55) 35.96%, rgba(var.$black, 0) 101.42%),
-        url("../../img/hero-bg-desktop@2x.jpg");
+        url("../img/hero-bg-desktop@2x.jpg");
     }
   }
 }
@@ -36,10 +36,10 @@
   &::after {
     content: "";
     position: absolute;
-    top: -24px;
-    left: -23px;
-    width: 257px;
-    height: 357px;
+    top: -33px;
+    left: -27px;
+    width: 263px;
+    height: 375px;
     background-image: url("../img/sprite.svg#hero-bg");
     z-index: 2;
 

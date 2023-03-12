@@ -1,0 +1,29 @@
+@use "../global//variables.scss" as var;
+
+.button {
+  display: block;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: var.$black;
+  border: none;
+  background: var.$atlantis;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: rgba(var.$black, 0.6);
+  }
+
+  &:active {
+    color: rgba(var.$black, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

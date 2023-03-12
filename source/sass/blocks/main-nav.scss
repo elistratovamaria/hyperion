@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
+  padding: 8px 16px 1px 16px;
 
   @media (min-width: var.$tablet-width) {
     padding: 12px 0 7px 0;
@@ -151,10 +151,10 @@
   transform: translateX(-50%);
 
   &:nth-child(1) {
-    top: 7px;
+    top: 4px;
   }
 
   &:nth-child(2) {
-    top: 14px;
+    top: 12px;
   }
 }
