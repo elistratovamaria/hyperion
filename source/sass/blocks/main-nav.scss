@@ -1,5 +1,15 @@
 @use "../global/variables.scss" as var;
 
+.main-nav {
+  position: relative;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .main-nav__wrapper {
   z-index: 3;
   flex-direction: column;
@@ -10,30 +20,24 @@
     left: 0;
     right: 0;
     padding: 0 16px;
-    min-height: 588px;
+    min-height: 576px;
     background-color: var.$white;
   }
 }
 
 .main-nav__wrapper--opened {
   display: flex;
-
-  .main-nav__toggle-line {
-    &:nth-child(1) {
-      transform: rotate(45deg) translateX(-50%);
-    }
-
-    &:nth-child(2) {
-      transform: rotate(-45deg) translateX(-50%);
-    }
-  }
 }
 
 .main-nav__top-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 16px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 12px 0 7px 0;
+  }
 }
 
 .main-nav__list {
@@ -41,16 +45,65 @@
   grid-template-columns: 1fr;
   row-gap: 24px;
   margin: 0;
-  padding: 36px 0 0 0;
+  padding: 18px 0 0 0;
   list-style: none;
   z-index: 3;
+
+  @media (min-width: var.$tablet-width) {
+    grid-template-columns: unset;
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+
+.main-nav__item {
+  &:last-child {
+    @media (min-width: var.$tablet-width) {
+      order: -1;
+    }
+  }
 }
 
 .main-nav__link {
   display: block;
+  font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   color: rgba(var.$black, 0.8);
+
+  &[href] {
+    &:hover {
+      color: rgba(var.$black, 0.6);
+    }
+
+    &:active {
+      color: rgba(var.$black, 0.3);
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    padding: 8px 14px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: var.$white;
+    background-color: var.$inch-worm;
+    border: 2px solid var.$inch-worm-2;
+    box-shadow: 0 2px 12px var.$light-grey;
+
+    &[href] {
+      &:hover {
+        color: rgba(var.$white, 0.6);
+      }
+
+      &:active {
+        color: rgba(var.$white, 0.3);
+      }
+    }
+  }
 }
 
 .main-nav__toggle {
@@ -69,6 +122,23 @@
     opacity: 0.3;
   }
 }
+
+.main-nav__toggle--opened {
+  .main-nav__toggle-line {
+    &:nth-child(1) {
+      top: 50%;
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
 
 .main-nav__toggle-line {
   display: block;

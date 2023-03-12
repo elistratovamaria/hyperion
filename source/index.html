@@ -26,7 +26,7 @@
         <nav class="main-header__nav main-nav">
           <div class="main-nav__top-wrapper">
             <span class="main-header__logo">
-              <img src="img/logo.svg" width="175" height="32" alt="Логотип.">
+              <img class="main-header__logo-img" src="img/logo.svg" width="175" height="32" alt="Логотип.">
             </span>
             <button class="main-nav__toggle" type="button">
               <span class="main-nav__toggle-line"></span>
@@ -46,7 +46,7 @@
                 <span class="main-nav__link">Главная</span>
               </li>
             </ul>
-            <div class="main-header__contacts">
+            <div class="main-header__contacts main-header__contacts--index">
               <div class="main-header__contacts-box">
                 <address class="main-header__contacts-item">
                   <svg class="main-header__contacts-img" aria-hidden="true" focusable="false" width="26" height="26">
@@ -54,13 +54,13 @@
                   </svg>
                   <span class="main-header__contacts-text">420132 г.Казань, Ул.Адоратского 78 офис 36</span>
                 </address>
-                <a class="main-header__contacts-item" href="tel:+79196450899">
+                <a class="main-header__contacts-item main-header__contacts-link" href="tel:+79196450899">
                   <svg class="main-header__contacts-img" aria-hidden="true" focusable="false" width="26" height="26">
                     <use xlink:href="img/sprite.svg#icon-call"></use>
                   </svg>
                   <span class="main-header__contacts-text">+7-919-645-08-99</span>
                 </a>
-                <a class="main-header__contacts-item" href="tel:+79963371091">
+                <a class="main-header__contacts-item main-header__contacts-link" href="tel:+79963371091">
                   <svg class="main-header__contacts-img" aria-hidden="true" focusable="false" width="26" height="26">
                     <use xlink:href="img/sprite.svg#icon-call"></use>
                   </svg>
@@ -68,13 +68,13 @@
                 </a>
               </div>
               <div class="main-header__contacts-socials">
-                <a class="main-header__contacts-social" href="#">
+                <a class="main-header__contacts-social main-header__contacts-link" href="#">
                   <svg class="main-header__contacts-img" aria-hidden="true" focusable="false" width="32" height="32">
                     <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
                   </svg>
                   <span class="main-header__contacts-text">WhatsApp</span>
                 </a>
-                <a class="main-header__contacts-social" href="#">
+                <a class="main-header__contacts-social main-header__contacts-link" href="#">
                   <svg class="main-header__contacts-img" aria-hidden="true" focusable="false" width="32" height="32">
                     <use xlink:href="img/sprite.svg#icon-telegram"></use>
                   </svg>
@@ -91,9 +91,11 @@
     <h1 class="visually-hidden">Проектно-строительная компания Гиперион</h1>
     <section class="hero">
       <div class="container">
-        <h2 class="hero__title">Проектно-строительная компания</h2>
-        <p class="hero__lead">Уже более 5 лет для наших заказчиков проектируем, согласовываем документацию и строим
-          коммерческую недвижимость</p>
+        <div class="hero__text-wrapper">
+          <h2 class="hero__title">Проектно-строительная компания</h2>
+          <p class="hero__lead">Уже более 5 лет для наших заказчиков проектируем, согласовываем документацию и строим
+            коммерческую недвижимость</p>
+        </div>
       </div>
     </section>
   </main>
