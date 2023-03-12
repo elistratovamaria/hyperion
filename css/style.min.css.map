@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss","style.css"],"names":[],"mappings":"AAEA,KACE,iBCDF","file":"style.min.css","sourcesContent":["@use \"global/fonts.scss\";\n\nbody {\n  background: tomato;\n}\n","body {\n  background: tomato;\n}"]}
