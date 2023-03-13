@@ -6,16 +6,28 @@
 }
 
 .projects__title {
-  margin: 0 0 16px 0;
-  font-family: var.$secondary-font;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
   color: var.$black;
+  margin: 0 0 35px 0;
 
-  @media (min-width: var.$tablet-width) {
-    font-size: 28px;
-    line-height: 34px;
+  @media (max-width: var.$mobile-width-only) {
+    display: none;
+  }
+
+  &--index {
+    margin: 0 0 16px 0;
+    font-family: var.$secondary-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var.$black;
+
+    @media (min-width: var.$tablet-width) {
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
 }
 
@@ -41,5 +53,382 @@
     margin: 0 auto 80px auto;
     font-size: 18px;
     line-height: 22px;
+  }
+}
+
+.projects__content {
+  &--main {
+    margin: 0 0 24px 0;
+
+    @media (min-width: var.$desktop-width) {
+      margin: 0 0 128px 0;
+    }
+  }
+}
+
+.projects__content-item {
+  margin: 0 0 16px 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media (min-width: var.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 24px;
+    margin: 0 0 36px 0;
+  }
+}
+
+.projects__content-part {
+  &--index {
+    @media (max-width: var.$mobile-width-only) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .projects__front {
+      transform: rotateY(-180deg);
+    }
+
+    .projects__back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.projects__wrap {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.projects__front {
+  transition: transform 0.7s linear;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.projects__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  transform: rotateY(180deg);
+  transition: transform 0.7s linear;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  padding: 24px;
+
+  &--krym {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/krym-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/krym-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/krym-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+          url("../img/index-projects/krym-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--magadan {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/magadan-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/magadan-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/magadan-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+          url("../img/index-projects/magadan-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--angar-wheel {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/angar-wheel-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/angar-wheel-desktop@2x.png");
+    }
+  }
+
+  &--angar-project-kaz {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/angar-project-kaz-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/angar-project-kaz-desktop@2x.png");
+    }
+  }
+
+  &--pavlotti {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/pavlotti-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/pavlotti-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/pavlotti-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+          url("../img/index-projects/pavlotti-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--angar5-7 {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/angar5-7-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/angar5-7-desktop@2x.png");
+    }
+  }
+}
+
+.projects__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(80px) scale(0.92);
+  backface-visibility: hidden;
+
+  &--front {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    .projects__item-title {
+      margin: 0 0 20px 0;
+      color: var.$white;
+    }
+
+    .projects__item-title--main {
+      margin: 0;
+    }
+  }
+
+  &--back {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    color: var.$black;
+
+    .projects__item-title {
+      margin: 0 0 16px 0;
+    }
+
+    .projects__bottom-wrapper {
+      margin: auto 0 0 0;
+    }
+  }
+}
+
+.projects__text-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  padding: 24px;
+  z-index: 2;
+  align-self: end;
+}
+
+.projects__item-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.projects__item-subtitle {
+  display: none;
+
+  @media (max-width: var.$mobile-width-only) {
+    display: block;
+    color: var.$white;
+  }
+}
+
+.projects__picture-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  min-width: 343px;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--krym {
+    background-image: url("../../img/index-projects/krym-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/index-projects/krym-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../../img/index-projects/krym-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/index-projects/krym-desktop@1x.jpg");
+      }
+    }
+  }
+
+  &--magadan {
+    background-image: url("../img/index-projects/magadan-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/magadan-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/magadan-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/magadan-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--angar-wheel {
+    background-image: url("../img/index-projects/angar-wheel-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/angar-wheel-mobile@2x.png");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/angar-wheel-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/angar-wheel-desktop@2x.png");
+      }
+    }
+  }
+
+  &--angar-project-kaz {
+    background-image: url("../img/index-projects/angar-project-kaz-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/angar-project-kaz-mobile@2x.png");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/angar-project-kaz-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/angar-project-kaz-desktop@2x.png");
+      }
+    }
+  }
+
+  &--pavlotti {
+    background-image: url("../img/index-projects/pavlotti-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/pavlotti-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/pavlotti-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/pavlotti-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--angar5-7 {
+    background-image: url("../img/index-projects/angar5-7-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/angar5-7-mobile@2x.png");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/angar5-7-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/angar5-7-desktop@2x.png");
+      }
+    }
+  }
+
+  &--rnv {
+    background-image: url("../img/index-projects/rnv-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/rnv-mobile@2x.png");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/rnv-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/rnv-desktop@2x.png");
+      }
+    }
+  }
+
+  &--pavlotti-2 {
+    background-image: url("../img/index-projects/pavlotti-2-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/pavlotti-2-mobile@2x.png");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/pavlotti-2-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/pavlotti-2-desktop@2x.png");
+      }
+    }
+  }
+
+  &--akbars {
+    background-image: url("../img/index-projects/akbars-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/akbars-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/akbars-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/akbars-desktop@2x.jpg");
+      }
+    }
   }
 }
