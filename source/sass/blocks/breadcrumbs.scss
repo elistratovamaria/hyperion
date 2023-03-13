@@ -1,0 +1,61 @@
+@use "../global/variables.scss" as var;
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 33px 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 17px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 24px 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.breadcrumbs__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin: 0 30px 0 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -23px;
+      width: 14px;
+      height: 1px;
+      background-color: rgba(var.$black, 0.6);
+    }
+
+    @media (min-width: var.$tablet-width) {
+      margin: 0 52px 0 0;
+
+      &::after {
+        right: -35px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+.breadcrumbs__link {
+  color: rgba(var.$black, 0.6);
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--current {
+    color: var.$yellow-green;
+  }
+}

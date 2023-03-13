@@ -5,14 +5,14 @@
 }
 
 .contacts__title {
-  margin: 48px 0 10px 0;
+  margin: 48px 0 0 0;
   font-weight: 600;
   font-size: 32px;
   line-height: 39px;
   color: var.$black;
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     font-size: 54px;
     line-height: 66px;
   }
@@ -20,14 +20,20 @@
 
 .contacts__logo {
   display: block;
-  margin: 0 0 16px 0;
+  margin: 0 0 18px 0;
+}
+
+.contacts__logo-img {
+  @media (min-width: var.$tablet-width) {
+    width: 175px;
+    height: 42px;
+  }
 }
 
 .contacts__wrapper {
   @media (min-width: var.$desktop-width) {
     display: flex;
     flex-direction: column;
-    min-height: 289px;
     padding: 24px 0;
     background-image: url("../img/map@1x.png");
     background-repeat: no-repeat;
@@ -53,6 +59,7 @@
   color: var.$black;
 
   @media (min-width: var.$tablet-width) {
+    margin: auto 0 0 0;
     font-size: 24px;
     line-height: 29px;
   }

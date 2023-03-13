@@ -31,13 +31,18 @@
   }
 
   &--small {
-    padding: 0 8px 8px 0;
+    padding: 0 8px 6px 0;
     border: none;
     width: 100%;
     border-bottom: 1px solid rgba(var.$black, 0.1);
 
     &::placeholder {
       color: rgba(var.$black, 0.3);
+    }
+
+    @media (min-width: var.$tablet-width) {
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 }

@@ -3,9 +3,9 @@
 .small-form {
   @media (min-width: var.$desktop-width) {
     position: absolute;
-    top: -50px;
+    top: -60px;
     right: 9%;
-    max-width: 357px;
+    width: 420px;
   }
 }
 
@@ -23,6 +23,11 @@
   line-height: 22px;
   color: var.$black;
   border-bottom: 1px solid rgba(var.$black, 0.07);
+
+  @media (min-width: var.$desktop-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .small-form__item {
@@ -55,6 +60,10 @@
 }
 
 .small-form__button {
-  margin: 32px 0 0 0;
+  margin: 42px 0 0 0;
   width: 100%;
+
+  @media (min-width: var.$desktop-width) {
+    margin: 60px 0 0 0;
+  }
 }
