@@ -1,0 +1,37 @@
+@use "../global//variables.scss" as var;
+
+.projects__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__title {
+  margin: 0 0 16px 0;
+  font-family: var.$secondary-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.projects__link {
+  display: inline-block;
+  margin: 0 auto 24px auto;
+  padding: 3px;
+  color: var.$black;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid rgba(var.$black, 0.4);
+
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 auto 80px auto;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

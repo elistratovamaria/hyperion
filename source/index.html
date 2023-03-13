@@ -69,15 +69,11 @@
               </div>
               <div class="main-header__contacts-socials">
                 <a class="main-header__contacts-social main-header__contacts-link" href="#">
-                  <svg class="main-header__contacts-img" aria-hidden="true" focusable="false" width="32" height="32">
-                    <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
-                  </svg>
+                  <img class="main-footer__icon" src="img/icon-whatsapp-mobile@1x.png" width="32" height="32" alt="">
                   <span class="main-header__contacts-text">WhatsApp</span>
                 </a>
                 <a class="main-header__contacts-social main-header__contacts-link" href="#">
-                  <svg class="main-header__contacts-img" aria-hidden="true" focusable="false" width="32" height="32">
-                    <use xlink:href="img/sprite.svg#icon-telegram"></use>
-                  </svg>
+                  <img class="main-footer__icon" src="img/icon-telegram-mobile@1x.png" width="32" height="32" alt="">
                   <span class="main-header__contacts-text">Telegram</span>
                 </a>
               </div>
@@ -662,7 +658,9 @@
                 <span>Ipsum</span>
               </h3>
               <p class="team__items-subtitle">Lorem ipsum dolor</p>
-              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, vero debitis ab mollitia sed nisi dolorem esse provident vel aliquid dolores odio architecto cupiditate non? Voluptate eveniet illum ducimus totam?</p>
+              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, vero
+                debitis ab mollitia sed nisi dolorem esse provident vel aliquid dolores odio architecto cupiditate non?
+                Voluptate eveniet illum ducimus totam?</p>
             </div>
           </li>
           <li class="team__item">
@@ -704,7 +702,8 @@
                 <span>Dolor</span>
               </h3>
               <p class="team__items-subtitle">Lorem</p>
-              <p class="team__item-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, sint voluptatum rerum eaque cumque blanditiis? Amet ab obcaecati itaque consequuntur!</p>
+              <p class="team__item-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, sint
+                voluptatum rerum eaque cumque blanditiis? Amet ab obcaecati itaque consequuntur!</p>
             </div>
           </li>
           <li class="team__item">
@@ -725,7 +724,8 @@
                 <span>Sit</span>
               </h3>
               <p class="team__items-subtitle">Lorem ipsum</p>
-              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis aperiam nulla illo impedit quasi?</p>
+              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis aperiam
+                nulla illo impedit quasi?</p>
             </div>
           </li>
           <li class="team__item">
@@ -746,7 +746,8 @@
                 <span>Amet</span>
               </h3>
               <p class="team__items-subtitle">Lorem</p>
-              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel fugit laborum suscipit veniam magni debitis quidem hic at dignissimos!</p>
+              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel fugit
+                laborum suscipit veniam magni debitis quidem hic at dignissimos!</p>
             </div>
           </li>
         </ul>
@@ -797,44 +798,278 @@
       </div>
     </section>
     <section class="projects">
-      <h2 class="projects__title">Наши проекты</h2>
-      <ul class="services-list">
-
-        <li class="services-item services-item-current">
-          <button class="button services-button services-button-current">Доставка</button>
-        </li>
-        <!--Для отображения активной кнопки добавить класс services-item-current-->
-        <li class="services-item">
-          <!--Для отображения активной кнопки добавить классы services-button-current-->
-          <button class="button services-button">Гарантия</button>
-        </li>
-        <!--Для отображения активной кнопки добавить класс services-item-current-->
-        <li class="services-item">
-          <!--Для отображения активной кнопки добавить классы services-button-current services-button-current-kredit-->
-          <button class="button services-button">Кредит</button>
-        </li>
-      </ul>
-      <ul class="services-details">
-        <li class="services-details-item services-details-item-delivery shown">
-          <h3 class="services-details-title title">Доставка</h3>
-          <p class="services-details-text">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему&nbsp;подъезду
-            совершенно
-            бесплатно! Ведь мы&nbsp;неплохо&nbsp;заработаем, поднимая его на ваш этаж.</p>
-        </li>
-        <li class="services-details-item services-details-item-guarantee">
-          <h3 class="services-details-title title">Гарантия</h3>
-          <p class="services-details-text">Если из-за возгорания купленного у нас товара у вас сгорит&nbsp;дом — не
-            переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-        </li>
-        <li class="services-details-item services-details-item-credit">
-          <h3 class="services-details-title title">Кредит</h3>
-          <p class="services-details-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для
-            вас
-            наиболее выгодные условия&nbsp;кредита. Выгодные для банка, разумеется.</p>
-        </li>
-      </ul>
+      <div class="container">
+        <div class="projects__wrapper">
+          <h2 class="projects__title">Наши проекты</h2>
+          <div class="projects__tabs tabs">
+            <ul class="tabs__links">
+              <li class="tabs__links-item">
+                <button class="tabs__link tabs__link--active" data-project="project-1" type="button">Все наши
+                  проекты</button>
+              </li>
+              <li class="tabs__links-item">
+                <button class="tabs__link" data-project="project-2" type="button">Промышленные здания</button>
+              </li>
+              <li class="tabs__links-item">
+                <button class="tabs__link" data-project="project-3" type="button">Офисы</button>
+              </li>
+            </ul>
+            <div class="tabs__content">
+              <ul id="project-1" class="tabs__content-item tabs__content-item--active">
+                <li class="tabs__content-part">
+                  <div class="tabs__wrap">
+                    <div class="tabs__front">
+                      <div class="tabs__inner tabs__inner--front">
+                        <div class="tabs__text-wrapper">
+                          <h3 class="tabs__item-title">Крым</h3>
+                          <p class="tabs__item-subtitle">Адрес</p>
+                        </div>
+                        <div class="tabs__picture-wrapper tabs__picture-wrapper--krym"></div>
+                      </div>
+                    </div>
+                    <div class="tabs__back tabs__back--krym">
+                      <div class="tabs__inner tabs__inner--back">
+                        <h3 class="tabs__item-title">Крым</h3>
+                        <p class="tabs__item-description">Описание проекта</p>
+                        <div class="tabs__bottom-wrapper">
+                          <p class="tabs__item-target">Назначение проекта</p>
+                          <p class="tabs__item-address">Адрес проекта</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__content-part">
+                  <div class="tabs__wrap">
+                    <div class="tabs__front">
+                      <div class="tabs__inner tabs__inner--front">
+                        <div class="tabs__text-wrapper">
+                          <h3 class="tabs__item-title">Магадан</h3>
+                          <p class="tabs__item-subtitle">Адрес</p>
+                        </div>
+                        <div class="tabs__picture-wrapper tabs__picture-wrapper--magadan"></div>
+                      </div>
+                    </div>
+                    <div class="tabs__back tabs__back--magadan">
+                      <div class="tabs__inner tabs__inner--back">
+                        <h3 class="tabs__item-title">Магадан</h3>
+                        <p class="tabs__item-description">Описание проекта</p>
+                        <div class="tabs__bottom-wrapper">
+                          <p class="tabs__item-target">Назначение проекта</p>
+                          <p class="tabs__item-address">Адрес проекта</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__content-part">
+                  <div class="tabs__wrap">
+                    <div class="tabs__front">
+                      <div class="tabs__inner tabs__inner--front">
+                        <div class="tabs__text-wrapper">
+                          <h3 class="tabs__item-title">Ангар на колесах</h3>
+                          <p class="tabs__item-subtitle">Адрес</p>
+                        </div>
+                        <div class="tabs__picture-wrapper tabs__picture-wrapper--angar-wheel"></div>
+                      </div>
+                    </div>
+                    <div class="tabs__back tabs__back--angar-wheel">
+                      <div class="tabs__inner tabs__inner--back">
+                        <h3 class="tabs__item-title">Ангар на колесах</h3>
+                        <p class="tabs__item-description">Описание проекта</p>
+                        <div class="tabs__bottom-wrapper">
+                          <p class="tabs__item-target">Назначение проекта</p>
+                          <p class="tabs__item-address">Адрес проекта</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__content-part">
+                  <div class="tabs__wrap">
+                    <div class="tabs__front">
+                      <div class="tabs__inner tabs__inner--front">
+                        <div class="tabs__text-wrapper">
+                          <h3 class="tabs__item-title">Проект Ангара<br>Казахстан</h3>
+                          <p class="tabs__item-subtitle">Адрес</p>
+                        </div>
+                        <div class="tabs__picture-wrapper tabs__picture-wrapper--angar-project-kaz"></div>
+                      </div>
+                    </div>
+                    <div class="tabs__back tabs__back--angar-project-kaz">
+                      <div class="tabs__inner tabs__inner--back">
+                        <h3 class="tabs__item-title">Проект Ангара<br>Казахстан</h3>
+                        <p class="tabs__item-description">Описание проекта</p>
+                        <div class="tabs__bottom-wrapper">
+                          <p class="tabs__item-target">Назначение проекта</p>
+                          <p class="tabs__item-address">Адрес проекта</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__content-part">
+                  <div class="tabs__wrap">
+                    <div class="tabs__front">
+                      <div class="tabs__inner tabs__inner--front">
+                        <div class="tabs__text-wrapper">
+                          <h3 class="tabs__item-title">Pavlotti</h3>
+                          <p class="tabs__item-subtitle">Адрес</p>
+                        </div>
+                        <div class="tabs__picture-wrapper tabs__picture-wrapper--pavlotti"></div>
+                      </div>
+                    </div>
+                    <div class="tabs__back tabs__back--pavlotti">
+                      <div class="tabs__inner tabs__inner--back">
+                        <h3 class="tabs__item-title">Pavlotti</h3>
+                        <p class="tabs__item-description">Описание проекта</p>
+                        <div class="tabs__bottom-wrapper">
+                          <p class="tabs__item-target">Назначение проекта</p>
+                          <p class="tabs__item-address">Адрес проекта</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__content-part">
+                  <div class="tabs__wrap">
+                    <div class="tabs__front">
+                      <div class="tabs__inner tabs__inner--front">
+                        <div class="tabs__text-wrapper">
+                          <h3 class="tabs__item-title">Ангар 5,5х7</h3>
+                          <p class="tabs__item-subtitle">Адрес</p>
+                        </div>
+                        <div class="tabs__picture-wrapper tabs__picture-wrapper--angar5-7"></div>
+                      </div>
+                    </div>
+                    <div class="tabs__back tabs__back--angar5-7">
+                      <div class="tabs__inner tabs__inner--back">
+                        <h3 class="tabs__item-title">Ангар 5,5х7</h3>
+                        <p class="tabs__item-description">Описание проекта</p>
+                        <div class="tabs__bottom-wrapper">
+                          <p class="tabs__item-target">Назначение проекта</p>
+                          <p class="tabs__item-address">Адрес проекта</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a class="projects__link" href="#">Показать больше проектов</a>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <form class="contacts__form small-form" action="#" method="post">
+        <div class="container">
+          <div class="small-form__wrapper">
+            <h2 class="small-form__title">Расчитать стоимость</h2>
+            <div class="small-form__input-wrapper">
+              <div class="small-form__item">
+                <label class="small-form__label" for="small-form-name">Ваше имя</label>
+                <input class="small-form__input input input--small" type="text" id="small-form-name" name="name"
+                  placeholder="Как к вам обращаться" required>
+              </div>
+              <div class="small-form__item">
+                <label class="small-form__label" for="main-form-phone">Номер телефона</label>
+                <input class="small-form__input input input--small" type="tel" id="small-form-phone" name="phone"
+                  placeholder="Телефон для связи" required>
+              </div>
+            </div>
+            <div class="small-form__item">
+              <label class="small-form__label" for="small-form-select">Вид услуги</label>
+              <select class="small-form__select input input--small" id="small-form-select">
+                <option class="small-form__option" value="" selected disabled hidden>Какая услуга</option>
+                <option class="small-form__option" value="buildings">Быстровозводимые здания</option>
+                <option class="small-form__option" value="engineering">Проектирование инженерных систем</option>
+                <option class="small-form__option" value="fire-protection">Проектирование противопожарных систем
+                </option>
+                <option class="small-form__option" value="constructive">Проекты конструктивной части</option>
+                <option class="small-form__option" value="accomplishment">Проектирование благоустройства</option>
+                <option class="small-form__option" value="plan">Генплан</option>
+                <option class="small-form__option" value="electrosupply">Проектирование системы электроснабжения
+                </option>
+                <option class="small-form__option" value="highways">Проектирование автомобильных дорог</option>
+                <option class="small-form__option" value="architecture">Архитектурные решения</option>
+                <option class="small-form__option" value="lightning-protection">Молниезащита и заземление</option>
+                <option class="small-form__option" value="montage">Монтаж</option>
+                <option class="small-form__option" value="construction">Строительство</option>
+              </select>
+            </div>
+            <button class="small-form__button button" type="submit">Отправить</button>
+          </div>
+        </div>
+      </form>
+      <div class="contacts__wrapper">
+        <div class="container">
+          <div class="contacts__text-wrapper">
+            <h2 class="contacts__title">Контакты</h2>
+            <span class="contacts__logo">
+              <img class="contacts__logo-img" src="img/logo.svg" width="165" height="35" alt="Логотип.">
+            </span>
+            <p class="contacts__text">Будем рады видеть Вас в нашем офисе</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="main-footer__wrapper">
+        <div class="main-footer__block">
+          <h3 class="main-footer__title">Наши данные</h3>
+          <address class="main-footer__item">
+            <svg class="main-footer__img" aria-hidden="true" focusable="false" width="28" height="28">
+              <use xlink:href="img/sprite.svg#icon-global"></use>
+            </svg>
+            <span class="main-footer__text">420132 г.Казань, Ул.Адоратского 78 офис 36</span>
+          </address>
+          <div class="main-footer__item">
+            <svg class="main-footer__img" aria-hidden="true" focusable="false" width="28" height="28">
+              <use xlink:href="img/sprite.svg#icon-clock"></use>
+            </svg>
+            <span class="main-footer__text">Время работы</span>
+          </div>
+        </div>
+        <div class="main-footer__block">
+          <h3 class="main-footer__title">Контакты для связи</h3>
+          <a class="main-footer__item" href="tel:+79196450899">
+            <svg class="main-footer__img" aria-hidden="true" focusable="false" width="28" height="28">
+              <use xlink:href="img/sprite.svg#icon-call"></use>
+            </svg>
+            <span class="main-footer__text">+7-919-645-08-99</span>
+          </a>
+          <a class="main-footer__item" href="tel:+79963371091">
+            <svg class="main-footer__img" aria-hidden="true" focusable="false" width="28" height="28">
+              <use xlink:href="img/sprite.svg#icon-call"></use>
+            </svg>
+            <span class="main-footer__text">+7-996-337-10-91</span>
+          </a>
+          <a class="main-footer__item" href="mailto:Mail@mail.ru">
+            <svg class="main-footer__img" aria-hidden="true" focusable="false" width="28" height="28">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            <span class="main-footer__text">Mail@mail.ru</span>
+          </a>
+        </div>
+      </div>
+      <div class="main-footer__block">
+        <h3 class="main-footer__title">Мы в социальных сетях</h3>
+        <div class="main-footer__block-wrapper">
+          <a class="main-footer__item" href="#">
+            <img class="main-footer__icon" src="img/icon-whatsapp-mobile@1x.png" width="32" height="32" alt="">
+            <span class="main-footer__text">WhatsApp</span>
+          </a>
+          <a class="main-footer__item" href="#">
+            <img class="main-footer__icon" src="img/icon-telegram-mobile@1x.png" width="32" height="32" alt="">
+            <span class="main-footer__text">Telegram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 

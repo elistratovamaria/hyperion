@@ -1,0 +1,60 @@
+@use "../global/variables.scss" as var;
+
+.small-form {
+  @media (min-width: var.$desktop-width) {
+    position: absolute;
+    top: -50px;
+    right: 9%;
+    max-width: 357px;
+  }
+}
+
+.small-form__wrapper {
+  padding: 16px;
+  background-color: var.$white;
+  box-shadow: 0 4px 20px rgba(var.$black, 0.1);
+}
+
+.small-form__title {
+  padding: 0 16px 16px 16px;
+  margin: 0 -16px 24px -16px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: var.$black;
+  border-bottom: 1px solid rgba(var.$black, 0.07);
+}
+
+.small-form__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 16px 0;
+}
+
+.small-form__label {
+  margin: 0 0 8px 0;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.small-form__select {
+  color: rgba(var.$black, 0.35);
+  appearance: none;
+  background-image: url("../img/sprite.svg#icon-add");
+  background-repeat: no-repeat;
+  background-position: top 0 right 0;
+  background-size: 22px 22px;
+
+  option {
+    color: var.$black;
+  }
+}
+
+.small-form__button {
+  margin: 32px 0 0 0;
+  width: 100%;
+}

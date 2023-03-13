@@ -1,0 +1,59 @@
+@use "../global/variables.scss" as var;
+
+.contacts {
+  position: relative;
+}
+
+.contacts__title {
+  margin: 48px 0 10px 0;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 15px 0;
+    font-size: 54px;
+    line-height: 66px;
+  }
+}
+
+.contacts__logo {
+  display: block;
+  margin: 0 0 16px 0;
+}
+
+.contacts__wrapper {
+  @media (min-width: var.$desktop-width) {
+    display: flex;
+    flex-direction: column;
+    min-height: 289px;
+    padding: 24px 0;
+    background-image: url("../img/map@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map@2x.png");
+    }
+  }
+}
+
+.contacts__text-wrapper {
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    min-height: 240px;
+  }
+}
+
+.contacts__text {
+  margin: auto 0 16px 0;
+  font-weight: 500;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}

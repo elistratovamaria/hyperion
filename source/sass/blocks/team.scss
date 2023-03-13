@@ -91,6 +91,9 @@
 }
 
 .team__img {
+  border-radius: 50%;
+  box-shadow: 0 4px 25px rgba(var.$black, 0.18);
+
   @media (min-width: var.$tablet-width) {
     width: 320px;
     height: 320px;
@@ -110,6 +113,7 @@
 
 .team__small-item {
   position: absolute;
+  opacity: 0.6;
 
   &--first {
     top: 58px;
@@ -140,4 +144,9 @@
     top: 60px;
     left: 395px;
   }
+}
+
+.team__small-img {
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(var.$black, 0.25);
 }

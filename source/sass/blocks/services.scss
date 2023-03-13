@@ -100,10 +100,6 @@
     .services__link {
       color: var.$white;
     }
-
-    .services__link-img path {
-      stroke: var.$white;
-    }
   }
 
   &--back {
@@ -119,10 +115,6 @@
     .services__link {
       margin: auto 0 0 0;
       color: var.$black;
-    }
-
-    .services__link-img path {
-      stroke: var.$black;
     }
   }
 }

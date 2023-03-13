@@ -1,0 +1,344 @@
+@use "../global//variables.scss" as var;
+
+.tabs__links {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 16px 0;
+  padding: 0;
+  list-style: none;
+  /*overflow: auto;
+  white-space: nowrap;*/
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 36px 0;
+  }
+}
+
+.tabs__links-item {
+  &:not(:last-child) {
+    margin: 0 12px 0 0;
+
+    @media (min-width: var.$tablet-width) {
+      margin: 0 24px 0 0;
+    }
+  }
+}
+
+.tabs__link {
+  border: none;
+  background-color: var.$transparent;
+  padding: 0;
+  font-family: inherit;
+  color: rgba(var.$black, 0.4);
+  transition: 0.3s ease;
+
+  &--active {
+    color: var.$atlantis;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.tabs__content-item {
+  margin: 0 0 16px 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media (min-width: var.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 24px;
+    margin: 0 0 36px 0;
+  }
+}
+
+.tabs__wrap {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.tabs__front {
+  transition: transform 0.7s linear;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.tabs__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  transform: rotateY(180deg);
+  transition: transform 0.7s linear;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  padding: 24px;
+
+  &--krym {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/krym-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/krym-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/krym-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+          url("../img/index-projects/krym-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--magadan {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/magadan-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/magadan-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/magadan-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+          url("../img/index-projects/magadan-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--angar-wheel {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/angar-wheel-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/angar-wheel-desktop@2x.png");
+    }
+  }
+
+  &--angar-project-kaz {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/angar-project-kaz-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/angar-project-kaz-desktop@2x.png");
+    }
+  }
+
+  &--pavlotti {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/pavlotti-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/pavlotti-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/pavlotti-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+          url("../img/index-projects/pavlotti-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--angar5-7 {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      url("../img/index-projects/angar5-7-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+        url("../img/index-projects/angar5-7-desktop@2x.png");
+    }
+  }
+}
+
+.tabs__content-part {
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(6) {
+    @media (max-width: var.$mobile-width-only) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .tabs__front {
+      transform: rotateY(-180deg);
+    }
+
+    .tabs__back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.tabs__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(80px) scale(0.92);
+  backface-visibility: hidden;
+
+  &--front {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    .tabs__item-title {
+      margin: 0 0 20px 0;
+      color: var.$white;
+    }
+  }
+
+  &--back {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+    color: var.$black;
+
+    .tabs__item-title {
+      margin: 0 0 16px 0;
+    }
+
+    .tabs__bottom-wrapper {
+      margin: auto 0 0 0;
+    }
+  }
+}
+
+.tabs__text-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  padding: 24px;
+  z-index: 2;
+  align-self: end;
+}
+
+.tabs__item-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.tabs__item-subtitle {
+  display: none;
+
+  @media (max-width: var.$mobile-width-only) {
+    display: block;
+    color: var.$white;
+  }
+}
+
+.tabs__picture-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  min-width: 343px;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--krym {
+    background-image: url("../../img/index-projects/krym-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/index-projects/krym-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../../img/index-projects/krym-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/index-projects/krym-desktop@1x.jpg");
+      }
+    }
+  }
+
+  &--magadan {
+    background-image: url("../img/index-projects/magadan-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/magadan-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/magadan-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/magadan-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--angar-wheel {
+    background-image: url("../img/index-projects/angar-wheel-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/angar-wheel-desktop@2x.png");
+    }
+  }
+
+  &--angar-project-kaz {
+    background-image: url("../img/index-projects/angar-project-kaz-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/angar-project-kaz-desktop@2x.png");
+    }
+  }
+
+  &--pavlotti {
+    background-image: url("../img/index-projects/pavlotti-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/pavlotti-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: url("../img/index-projects/pavlotti-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-projects/pavlotti-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--angar5-7 {
+    background-image: url("../img/index-projects/angar5-7-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-projects/angar5-7-desktop@2x.png");
+    }
+  }
+}

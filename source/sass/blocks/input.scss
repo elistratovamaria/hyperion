@@ -1,18 +1,19 @@
 @use "../global/variables.scss" as var;
 
 .input {
+  font-family: inherit;
+  width: 100%;
+  color: var.$black;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: var.$transparent;
+  transition: 0.3s ease;
+
   &--large {
-    font-family: inherit;
-    width: 100%;
     padding: 11px 16px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: var.$black;
     border: 1px solid rgba(var.$black, 0.3);
     border-radius: 8px;
-    background-color: var.$transparent;
-    transition: 0.3s ease;
 
     &:hover {
       border-color: var.$black;
@@ -26,6 +27,17 @@
       padding: 14px 16px;
       font-size: 18px;
       line-height: 22px;
+    }
+  }
+
+  &--small {
+    padding: 0 8px 8px 0;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid rgba(var.$black, 0.1);
+
+    &::placeholder {
+      color: rgba(var.$black, 0.3);
     }
   }
 }

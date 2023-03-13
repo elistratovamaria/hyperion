@@ -5,10 +5,15 @@
 }
 
 .about__wrapper {
+  margin: 0 0 16px 0;
+
   @media (min-width: var.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+  }
+
+  @media (min-width: var.$desktop-width) {
     margin: 0 0 -10px 0;
   }
 }

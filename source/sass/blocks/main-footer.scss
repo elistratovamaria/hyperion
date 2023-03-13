@@ -1,0 +1,77 @@
+@use "../global/variables.scss" as var;
+
+.main-footer {
+  padding: 0 0 84px 0;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 24px 0;
+    background-color: rgba(var.$atlantis, 0.85);
+  }
+}
+
+.main-footer__title {
+  margin: 0 0 12px 0;
+  font-weight: 500;
+  color: rgba(var.$black, 0.7);
+}
+
+.main-footer__wrapper {
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 739px;
+  }
+}
+
+.main-footer__block {
+  padding: 16px;
+  margin: 0 0 16px 0;
+  background-color: var.$white;
+  box-shadow: 0 4px 20px rgba(var.$black, 0.07);
+
+  @media (min-width: var.$tablet-width) {
+    background-color: var.$transparent;
+    box-shadow: unset;
+    max-width: 365px;
+  }
+}
+
+.main-footer__text {
+  font-weight: 500;
+  font-style: normal;
+  color: var.$black;
+}
+
+.main-footer__item {
+  display: flex;
+  align-items: center;
+  color: var.$black;
+
+  &:not(:last-child) {
+    margin: 0 0 12px 0;
+  }
+}
+
+.main-footer__img {
+  margin: 0 8px 0 0;
+  min-width: 28px;
+
+  path {
+    stroke: var.$black;
+  }
+}
+
+.main-footer__icon {
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.main-footer__block-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  .main-footer__item {
+    margin: 0;
+  }
+}
