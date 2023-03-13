@@ -1,0 +1,416 @@
+@use "../global//variables.scss" as var;
+
+.services__title {
+  margin: 0 0 16px 0;
+  font-family: var.$secondary-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 24px 0;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.services__wrap {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin: 0 0 24px 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: var.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 48px 0;
+  }
+}
+
+.services__front {
+  transition: transform 0.7s linear;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.services__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 461px;
+  transform: rotateY(180deg);
+  transition: transform 0.7s linear;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  padding: 24px;
+  background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+    linear-gradient(180deg, rgba(var.$black, 0) 56.13%, rgba(var.$black, 0.4) 100%),
+    url("../img/index-services/service-bg@1x.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(var.$atlantis, 0.85) 0%, rgba(var.$atlantis, 0.85) 100%),
+      linear-gradient(180deg, rgba(var.$black, 0) 56.13%, rgba(var.$black, 0.4) 100%),
+      url("../img/index-services/service-bg@2x.png");
+  }
+}
+
+.services__item {
+  &:hover {
+    .services__front {
+      transform: rotateY(-180deg);
+    }
+
+    .services__back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.services__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(80px) scale(0.92);
+  backface-visibility: hidden;
+
+  &--front {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    .services__item-title {
+      margin: 0 0 22px 0;
+      color: var.$white;
+    }
+
+    .services__link {
+      color: var.$white;
+    }
+
+    .services__link-img path {
+      stroke: var.$white;
+    }
+  }
+
+  &--back {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+
+    .services__item-title {
+      margin: 0 0 8px 0;
+      color: var.$black;
+    }
+
+    .services__link {
+      margin: auto 0 0 0;
+      color: var.$black;
+    }
+
+    .services__link-img path {
+      stroke: var.$black;
+    }
+  }
+}
+
+.services__text-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  padding: 20px 20px 16px 20px;
+  z-index: 2;
+  align-self: end;
+
+  @media (min-width: var.$desktop-width) {
+    padding: 24px;
+  }
+}
+
+.services__picture-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  min-width: 343px;
+  min-height: 461px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--buildings {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/buildings-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/buildings-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/buildings-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/buildings-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--engineering {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/engineering-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/engineering-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/engineering-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/engineering-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--fire-protection {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/fire-protection-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/fire-protection-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/fire-protection-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/fire-protection-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--constructive {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/constructive-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/constructive-mobile@2x.png");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/constructive-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/constructive-desktop@2x.png");
+      }
+    }
+  }
+
+  &--accomplishment {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/accomplishment-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/accomplishment-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/accomplishment-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/accomplishment-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--plan {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/plan-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/plan-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/plan-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/plan-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--electrosupply {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/electrosupply-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/electrosupply-mobile@2x.png");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/electrosupply-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/electrosupply-desktop@2x.png");
+      }
+    }
+  }
+
+  &--highways {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/highways-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/highways-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/highways-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/highways-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--architecture {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/architecture-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/architecture-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/architecture-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/architecture-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--lightning-protection {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/lightning-protection-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/lightning-protection-mobile@2x.png");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/lightning-protection-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/lightning-protection-desktop@2x.png");
+      }
+    }
+  }
+
+  &--montage {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/montage-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/montage-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/montage-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/montage-desktop@2x.jpg");
+      }
+    }
+  }
+
+  &--construction {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+      url("../img/index-services/construction-mobile@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/construction-mobile@2x.jpg");
+    }
+
+    @media (min-width: var.$desktop-width) {
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+        url("../img/index-services/construction-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.39%, rgba(0, 0, 0, 0.4) 89.01%),
+          url("../img/index-services/construction-desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+.services__item-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.services__link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.services__link-text {
+  margin: 0 10px 0 0;
+}
+
+.services__image {
+  @media (min-width: var.$desktop-width) {
+    min-width: 357px;
+  }
+}
+
+.services__text {
+  margin: 0;
+}

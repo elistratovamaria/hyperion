@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    margin: 0 0 -10px 0;
   }
 }
 
@@ -64,14 +65,6 @@
     @media (min-width: var.$tablet-width) {
       margin: 0 0 102px 0;
     }
-  }
-}
-
-.about__text-wrapper {
-  margin: 0 0 24px 0;
-
-  @media (min-width: var.$tablet-width) {
-    margin: 0 0 48px 0;
   }
 }
 
