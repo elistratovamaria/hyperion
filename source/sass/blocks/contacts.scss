@@ -19,13 +19,15 @@
 }
 
 .contacts__logo {
-  display: block;
+  display: inline-block;
   margin: 0 0 18px 0;
 }
 
 .contacts__logo-img {
+  width: 100%;
+
   @media (min-width: var.$tablet-width) {
-    width: 175px;
+    width: 195px;
     height: 42px;
   }
 }
