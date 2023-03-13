@@ -1,0 +1,18 @@
+@use "../global/variables.scss" as var;
+
+.icon {
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+
+  &--whatsapp {
+    background-image: linear-gradient(226.97deg, var.$fern 9.27%, var.$lime-green 100%);
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--telegram {
+    background-image: linear-gradient(180deg, var.$summer-sky 0%, var.$cerulean 100%);
+  }
+}
