@@ -10,14 +10,14 @@
   background-color: var.$transparent;
   transition: 0.3s ease;
 
+  &:hover {
+    border-color: var.$black;
+  }
+
   &--large {
     padding: 11px 16px;
     border: 1px solid rgba(var.$black, 0.3);
     border-radius: 8px;
-
-    &:hover {
-      border-color: var.$black;
-    }
 
     &::placeholder {
       color: rgba(var.$black, 0.3);
