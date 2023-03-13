@@ -399,6 +399,15 @@
   align-items: center;
   font-weight: 600;
   text-decoration: underline;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .services__link-text {

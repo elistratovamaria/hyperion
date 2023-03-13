@@ -36,6 +36,7 @@
   font-weight: 500;
   color: var.$black;
   border: 1px solid var.$atlantis;
+  transition: opacity 0.3s ease;
 
   &:hover {
     opacity: 0.6;
