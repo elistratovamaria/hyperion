@@ -60,3 +60,29 @@ const swiperMontage = new Swiper('.montage__slider', {
   }
 });
 
+/* Slider buildings */
+
+const swiperBuildings = new Swiper('.buildings__slider', {
+  navigation: {
+    nextEl: '.buildings__button--next',
+    prevEl: '.buildings__button--prev',
+  },
+  slidesPerView: 1,
+  slideToClickedSlide: true,
+  thumbs: {
+    swiper: {
+      el: '.buildings__mini-slider',
+      breakpoints: {
+        375: {
+          slidesPerView: 'auto',
+          spaceBetween: 4,
+        },
+        768: {
+          slidesPerView: 5,
+          spaceBetween: 16,
+        }
+      }
+    }
+  }
+});
+
