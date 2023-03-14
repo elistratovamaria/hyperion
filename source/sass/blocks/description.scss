@@ -1,0 +1,50 @@
+@use "../global/variables.scss" as var;
+
+.description {
+  padding: 0 0 8px 0;
+}
+
+.description__title {
+  position: relative;
+  padding: 0 0 20px 0;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: var.$black;
+  border-bottom: 1px solid rgba(var.$black, 0.1);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 101px;
+    height: 4px;
+    background-color: var.$atlantis;
+
+    @media (min-width: var.$tablet-width) {
+      width: 130px;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.description__text {
+  &--without-indent {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.description__list {
+  margin-top: 0;
+}

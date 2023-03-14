@@ -1,0 +1,28 @@
+@use "../global/variables.scss" as var;
+
+.swiper.mini-slider {
+  max-width: 100%;
+}
+
+.swiper-slide.mini-slider__slide {
+  max-width: 80px;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 135px;
+  }
+}
+
+.mini-slider__slide {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+
+  img {
+    @media (min-width: var.$tablet-width) {
+      width: 135px;
+    }
+  }
+}
+
+.mini-slider__slide.swiper-slide-thumb-active {
+  opacity: 1;
+}

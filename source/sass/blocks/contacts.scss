@@ -16,15 +16,20 @@
     font-size: 54px;
     line-height: 66px;
   }
+
+  &--services {
+    margin: 22px 0 7px 0;
+  }
 }
 
 .contacts__logo {
   display: inline-block;
-  margin: 0 0 18px 0;
+  margin: 0 0 10px 0;
 }
 
 .contacts__logo-img {
-  width: 100%;
+  width: 165px;
+  height: 35px;
 
   @media (min-width: var.$tablet-width) {
     width: 195px;
@@ -45,6 +50,14 @@
       background-image: url("../img/map@2x.png");
     }
   }
+
+  &--services {
+    display: none;
+
+    @media (max-width: var.$mobile-width-only) {
+      display: flex;
+    }
+  }
 }
 
 .contacts__text-wrapper {
@@ -61,8 +74,11 @@
   color: var.$black;
 
   @media (min-width: var.$tablet-width) {
-    margin: auto 0 0 0;
     font-size: 24px;
     line-height: 29px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: auto 0 0 0;
   }
 }
