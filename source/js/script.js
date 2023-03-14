@@ -34,4 +34,29 @@ const swiperConstruction = new Swiper('.construction__slider', {
   }
 });
 
+/* Slider montage */
+
+const swiperMontage = new Swiper('.montage__slider', {
+  navigation: {
+    nextEl: '.montage__button--next',
+    prevEl: '.montage__button--prev',
+  },
+  slidesPerView: 1,
+  slideToClickedSlide: true,
+  thumbs: {
+    swiper: {
+      el: '.montage__mini-slider',
+      breakpoints: {
+        375: {
+          slidesPerView: 'auto',
+          spaceBetween: 4,
+        },
+        768: {
+          slidesPerView: 5,
+          spaceBetween: 16,
+        }
+      }
+    }
+  }
+});
 
