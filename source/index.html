@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная страница</title>
+  <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/montserrat/montserrat-regular.woff2" type="font/woff2" as="font"
     crossorigin="anonymous">
@@ -69,13 +70,15 @@
               </div>
               <div class="main-header__contacts-socials">
                 <a class="main-header__contacts-social main-header__contacts-link" href="#">
-                  <svg class="main-header__icon icon icon--whatsapp" aria-hidden="true" focusable="false" width="32" height="32">
+                  <svg class="main-header__icon icon icon--whatsapp" aria-hidden="true" focusable="false" width="32"
+                    height="32">
                     <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
                   </svg>
                   <span class="main-header__contacts-text">WhatsApp</span>
                 </a>
                 <a class="main-header__contacts-social main-header__contacts-link" href="#">
-                  <svg class="main-header__icon icon icon--telegram" aria-hidden="true" focusable="false" width="32" height="32">
+                  <svg class="main-header__icon icon icon--telegram" aria-hidden="true" focusable="false" width="32"
+                    height="32">
                     <use xlink:href="img/sprite.svg#icon-telegram"></use>
                   </svg>
                   <span class="main-header__contacts-text">Telegram</span>
@@ -620,141 +623,152 @@
     <section class="team">
       <div class="container">
         <h2 class="team__title">Наши сотрудники</h2>
-        <ul class="team__list swiper">
-          <li class="team__item">
-            <div class="team__picture-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
-                <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
-                  srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
-              </picture>
+        <div class="team__list swiper">
+          <div class="swiper-wrapper">
+            <div class="team__item swiper-slide">
+              <div class="team__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
+                  <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
+                    srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
+                </picture>
+              </div>
+              <div class="team__text-wrapper">
+                <h3 class="team__item-title">
+                  <span class="team__item-accent">Роман</span>
+                  <span>Александрович</span>
+                </h3>
+                <p class="team__items-subtitle">Директор ООО «ГИПЕРИОН»</p>
+                <p class="team__item-text">Окончив строительный университет, профессиональную карьеру начинал мастером
+                  строительного участка, далее возглавлял строительный контроль коммерческих объектов (Леруа Мерлен,
+                  Пятерочка, Карусель, Лента и т.п.), после основал строительную компанию «Гиперион».</p>
+              </div>
             </div>
-            <div class="team__text-wrapper">
-              <h3 class="team__item-title">
-                <span class="team__item-accent">Роман</span>
-                <span>Александрович</span>
-              </h3>
-              <p class="team__items-subtitle">Директор ООО «ГИПЕРИОН»</p>
-              <p class="team__item-text">Окончив строительный университет, профессиональную карьеру начинал мастером
-                строительного участка, далее возглавлял строительный контроль коммерческих объектов (Леруа Мерлен,
-                Пятерочка, Карусель, Лента и т.п.), после основал строительную компанию «Гиперион».</p>
+            <div class="team__item swiper-slide">
+              <div class="team__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
+                  <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
+                    srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
+                </picture>
+              </div>
+              <div class="team__text-wrapper">
+                <h3 class="team__item-title">
+                  <span class="team__item-accent">Lorem</span>
+                  <span>Ipsum</span>
+                </h3>
+                <p class="team__items-subtitle">Lorem ipsum dolor</p>
+                <p class="team__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, vero
+                  debitis ab mollitia sed nisi dolorem esse provident vel aliquid dolores odio architecto cupiditate
+                  non?
+                  Voluptate eveniet illum ducimus totam?</p>
+              </div>
             </div>
-          </li>
-          <li class="team__item">
-            <div class="team__picture-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
-                <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
-                  srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
-              </picture>
+            <div class="team__item swiper-slide">
+              <div class="team__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
+                  <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
+                    srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
+                </picture>
+              </div>
+              <div class="team__text-wrapper">
+                <h3 class="team__item-title">
+                  <span class="team__item-accent">Ipsum</span>
+                  <span>Ipsum</span>
+                </h3>
+                <p class="team__items-subtitle">Ipsum dolor sit</p>
+                <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, suscipit!</p>
+              </div>
             </div>
-            <div class="team__text-wrapper">
-              <h3 class="team__item-title">
-                <span class="team__item-accent">Lorem</span>
-                <span>Ipsum</span>
-              </h3>
-              <p class="team__items-subtitle">Lorem ipsum dolor</p>
-              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae, vero
-                debitis ab mollitia sed nisi dolorem esse provident vel aliquid dolores odio architecto cupiditate non?
-                Voluptate eveniet illum ducimus totam?</p>
+            <div class="team__item swiper-slide">
+              <div class="team__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
+                  <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
+                    srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
+                </picture>
+              </div>
+              <div class="team__text-wrapper">
+                <h3 class="team__item-title">
+                  <span class="team__item-accent">Dolor</span>
+                  <span>Dolor</span>
+                </h3>
+                <p class="team__items-subtitle">Lorem</p>
+                <p class="team__item-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, sint
+                  voluptatum rerum eaque cumque blanditiis? Amet ab obcaecati itaque consequuntur!</p>
+              </div>
             </div>
-          </li>
-          <li class="team__item">
-            <div class="team__picture-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
-                <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
-                  srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
-              </picture>
+            <div class="team__item swiper-slide">
+              <div class="team__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
+                  <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
+                    srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
+                </picture>
+              </div>
+              <div class="team__text-wrapper">
+                <h3 class="team__item-title">
+                  <span class="team__item-accent">Sit</span>
+                  <span>Sit</span>
+                </h3>
+                <p class="team__items-subtitle">Lorem ipsum</p>
+                <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis
+                  aperiam
+                  nulla illo impedit quasi?</p>
+              </div>
             </div>
-            <div class="team__text-wrapper">
-              <h3 class="team__item-title">
-                <span class="team__item-accent">Ipsum</span>
-                <span>Ipsum</span>
-              </h3>
-              <p class="team__items-subtitle">Ipsum dolor sit</p>
-              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, suscipit!</p>
+            <div class="team__item swiper-slide">
+              <div class="team__picture-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
+                  <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
+                    srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
+                </picture>
+              </div>
+              <div class="team__text-wrapper">
+                <h3 class="team__item-title">
+                  <span class="team__item-accent">Amet</span>
+                  <span>Amet</span>
+                </h3>
+                <p class="team__items-subtitle">Lorem</p>
+                <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel fugit
+                  laborum suscipit veniam magni debitis quidem hic at dignissimos!</p>
+              </div>
             </div>
-          </li>
-          <li class="team__item">
-            <div class="team__picture-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
-                <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
-                  srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
-              </picture>
-            </div>
-            <div class="team__text-wrapper">
-              <h3 class="team__item-title">
-                <span class="team__item-accent">Dolor</span>
-                <span>Dolor</span>
-              </h3>
-              <p class="team__items-subtitle">Lorem</p>
-              <p class="team__item-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, sint
-                voluptatum rerum eaque cumque blanditiis? Amet ab obcaecati itaque consequuntur!</p>
-            </div>
-          </li>
-          <li class="team__item">
-            <div class="team__picture-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
-                <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
-                  srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
-              </picture>
-            </div>
-            <div class="team__text-wrapper">
-              <h3 class="team__item-title">
-                <span class="team__item-accent">Sit</span>
-                <span>Sit</span>
-              </h3>
-              <p class="team__items-subtitle">Lorem ipsum</p>
-              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis aperiam
-                nulla illo impedit quasi?</p>
-            </div>
-          </li>
-          <li class="team__item">
-            <div class="team__picture-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.webp 1x, img/team/team-1-desktop@2x.webp 2x">
-                <source type="image/webp" srcset="img/team/team-1-mobile@1x.webp 1x, img/team/team-1-mobile@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/team/team-1-desktop@1x.png 1x, img/team/team-1-desktop@2x.png 2x">
-                <img class="team__img" width="240" height="240" src="img/team/team-1-mobile@1x.png"
-                  srcset="img/team/team-1-mobile@2x.png 2x" alt="Фото директора.">
-              </picture>
-            </div>
-            <div class="team__text-wrapper">
-              <h3 class="team__item-title">
-                <span class="team__item-accent">Amet</span>
-                <span>Amet</span>
-              </h3>
-              <p class="team__items-subtitle">Lorem</p>
-              <p class="team__item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae vel fugit
-                laborum suscipit veniam magni debitis quidem hic at dignissimos!</p>
-            </div>
-          </li>
-        </ul>
+          </div>
+          <div class="team__pagination swiper-pagination"></div>
+        </div>
         <ul class="team__small-list">
           <li class="team__small-item team__small-item--first">
             <picture>
@@ -805,160 +819,204 @@
       <div class="container">
         <div class="projects__wrapper">
           <h2 class="projects__title projects__title--index">Наши проекты</h2>
-          <div class="projects__tabs tabs">
-            <ul class="tabs__links">
-              <li class="tabs__links-item">
-                <button class="tabs__link tabs__link--active" data-project="project-1" type="button">Все наши
+          <div class="projects__tabs tabs" data-tabs="parent">
+            <div class="tabs__links" data-tabs="controls">
+                <button class="tabs__link is-active" data-tabs="control" type="button">Все наши
                   проекты</button>
-              </li>
-              <li class="tabs__links-item">
-                <button class="tabs__link" data-project="project-2" type="button">Промышленные здания</button>
-              </li>
-              <li class="tabs__links-item">
-                <button class="tabs__link" data-project="project-3" type="button">Офисы</button>
-              </li>
-            </ul>
-            <div class="tabs__content projects__content">
-              <ul id="project-1" class="tabs__content-item tabs__content-item--active projects__content-item">
-                <li class="projects__content-part">
-                  <div class="projects__wrap">
-                    <div class="projects__front">
-                      <div class="projects__inner projects__inner--front">
-                        <div class="projects__text-wrapper">
+                <button class="tabs__link" data-tabs="control" type="button">Промышленные здания</button>
+                <button class="tabs__link" data-tabs="control" type="button">Офисы</button>
+            </div>
+            <div class="tabs__content projects__content" data-tabs="content">
+                <div class="tabs__content-item projects__content-item" data-tabs="element">
+                  <div class="projects__content-part">
+                    <div class="projects__wrap">
+                      <div class="projects__front">
+                        <div class="projects__inner projects__inner--front">
+                          <div class="projects__text-wrapper">
+                            <h3 class="projects__item-title">Крым</h3>
+                            <p class="projects__item-subtitle">Адрес</p>
+                          </div>
+                          <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
+                        </div>
+                      </div>
+                      <div class="projects__back projects__back--krym">
+                        <div class="projects__inner projects__inner--back">
                           <h3 class="projects__item-title">Крым</h3>
-                          <p class="projects__item-subtitle">Адрес</p>
-                        </div>
-                        <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
-                      </div>
-                    </div>
-                    <div class="projects__back projects__back--krym">
-                      <div class="projects__inner projects__inner--back">
-                        <h3 class="projects__item-title">Крым</h3>
-                        <p class="projects__item-description">Описание проекта</p>
-                        <div class="projects__bottom-wrapper">
-                          <p class="projects__item-target">Назначение проекта</p>
-                          <p class="projects__item-address">Адрес проекта</p>
+                          <p class="projects__item-description">Описание проекта</p>
+                          <div class="projects__bottom-wrapper">
+                            <p class="projects__item-target">Назначение проекта</p>
+                            <p class="projects__item-address">Адрес проекта</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li class="projects__content-part">
-                  <div class="projects__wrap">
-                    <div class="projects__front">
-                      <div class="projects__inner projects__inner--front">
-                        <div class="projects__text-wrapper">
+                  <div class="projects__content-part">
+                    <div class="projects__wrap">
+                      <div class="projects__front">
+                        <div class="projects__inner projects__inner--front">
+                          <div class="projects__text-wrapper">
+                            <h3 class="projects__item-title">Магадан</h3>
+                            <p class="projects__item-subtitle">Адрес</p>
+                          </div>
+                          <div class="projects__picture-wrapper projects__picture-wrapper--magadan"></div>
+                        </div>
+                      </div>
+                      <div class="projects__back projects__back--magadan">
+                        <div class="projects__inner projects__inner--back">
                           <h3 class="projects__item-title">Магадан</h3>
-                          <p class="projects__item-subtitle">Адрес</p>
-                        </div>
-                        <div class="projects__picture-wrapper projects__picture-wrapper--magadan"></div>
-                      </div>
-                    </div>
-                    <div class="projects__back projects__back--magadan">
-                      <div class="projects__inner projects__inner--back">
-                        <h3 class="projects__item-title">Магадан</h3>
-                        <p class="projects__item-description">Описание проекта</p>
-                        <div class="projects__bottom-wrapper">
-                          <p class="projects__item-target">Назначение проекта</p>
-                          <p class="projects__item-address">Адрес проекта</p>
+                          <p class="projects__item-description">Описание проекта</p>
+                          <div class="projects__bottom-wrapper">
+                            <p class="projects__item-target">Назначение проекта</p>
+                            <p class="projects__item-address">Адрес проекта</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li class="projects__content-part projects__content-part--index">
-                  <div class="projects__wrap">
-                    <div class="projects__front">
-                      <div class="projects__inner projects__inner--front">
-                        <div class="projects__text-wrapper">
+                  <div class="projects__content-part projects__content-part--index">
+                    <div class="projects__wrap">
+                      <div class="projects__front">
+                        <div class="projects__inner projects__inner--front">
+                          <div class="projects__text-wrapper">
+                            <h3 class="projects__item-title">Ангар на колесах</h3>
+                            <p class="projects__item-subtitle">Адрес</p>
+                          </div>
+                          <div class="projects__picture-wrapper projects__picture-wrapper--angar-wheel"></div>
+                        </div>
+                      </div>
+                      <div class="projects__back projects__back--angar-wheel">
+                        <div class="projects__inner projects__inner--back">
                           <h3 class="projects__item-title">Ангар на колесах</h3>
-                          <p class="projects__item-subtitle">Адрес</p>
-                        </div>
-                        <div class="projects__picture-wrapper projects__picture-wrapper--angar-wheel"></div>
-                      </div>
-                    </div>
-                    <div class="projects__back projects__back--angar-wheel">
-                      <div class="projects__inner projects__inner--back">
-                        <h3 class="projects__item-title">Ангар на колесах</h3>
-                        <p class="projects__item-description">Описание проекта</p>
-                        <div class="projects__bottom-wrapper">
-                          <p class="projects__item-target">Назначение проекта</p>
-                          <p class="projects__item-address">Адрес проекта</p>
+                          <p class="projects__item-description">Описание проекта</p>
+                          <div class="projects__bottom-wrapper">
+                            <p class="projects__item-target">Назначение проекта</p>
+                            <p class="projects__item-address">Адрес проекта</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li class="projects__content-part projects__content-part--index">
-                  <div class="projects__wrap">
-                    <div class="projects__front">
-                      <div class="projects__inner projects__inner--front">
-                        <div class="projects__text-wrapper">
+                  <div class="projects__content-part projects__content-part--index">
+                    <div class="projects__wrap">
+                      <div class="projects__front">
+                        <div class="projects__inner projects__inner--front">
+                          <div class="projects__text-wrapper">
+                            <h3 class="projects__item-title">Проект Ангара<br>Казахстан</h3>
+                            <p class="projects__item-subtitle">Адрес</p>
+                          </div>
+                          <div class="projects__picture-wrapper projects__picture-wrapper--angar-project-kaz"></div>
+                        </div>
+                      </div>
+                      <div class="projects__back projects__back--angar-project-kaz">
+                        <div class="projects__inner projects__inner--back">
                           <h3 class="projects__item-title">Проект Ангара<br>Казахстан</h3>
-                          <p class="projects__item-subtitle">Адрес</p>
-                        </div>
-                        <div class="projects__picture-wrapper projects__picture-wrapper--angar-project-kaz"></div>
-                      </div>
-                    </div>
-                    <div class="projects__back projects__back--angar-project-kaz">
-                      <div class="projects__inner projects__inner--back">
-                        <h3 class="projects__item-title">Проект Ангара<br>Казахстан</h3>
-                        <p class="projects__item-description">Описание проекта</p>
-                        <div class="projects__bottom-wrapper">
-                          <p class="projects__item-target">Назначение проекта</p>
-                          <p class="projects__item-address">Адрес проекта</p>
+                          <p class="projects__item-description">Описание проекта</p>
+                          <div class="projects__bottom-wrapper">
+                            <p class="projects__item-target">Назначение проекта</p>
+                            <p class="projects__item-address">Адрес проекта</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li class="projects__content-part">
-                  <div class="projects__wrap">
-                    <div class="projects__front">
-                      <div class="projects__inner projects__inner--front">
-                        <div class="projects__text-wrapper">
+                  <div class="projects__content-part">
+                    <div class="projects__wrap">
+                      <div class="projects__front">
+                        <div class="projects__inner projects__inner--front">
+                          <div class="projects__text-wrapper">
+                            <h3 class="projects__item-title">Pavlotti</h3>
+                            <p class="projects__item-subtitle">Адрес</p>
+                          </div>
+                          <div class="projects__picture-wrapper projects__picture-wrapper--pavlotti"></div>
+                        </div>
+                      </div>
+                      <div class="projects__back projects__back--pavlotti">
+                        <div class="projects__inner projects__inner--back">
                           <h3 class="projects__item-title">Pavlotti</h3>
-                          <p class="projects__item-subtitle">Адрес</p>
-                        </div>
-                        <div class="projects__picture-wrapper projects__picture-wrapper--pavlotti"></div>
-                      </div>
-                    </div>
-                    <div class="projects__back projects__back--pavlotti">
-                      <div class="projects__inner projects__inner--back">
-                        <h3 class="projects__item-title">Pavlotti</h3>
-                        <p class="projects__item-description">Описание проекта</p>
-                        <div class="projects__bottom-wrapper">
-                          <p class="projects__item-target">Назначение проекта</p>
-                          <p class="projects__item-address">Адрес проекта</p>
+                          <p class="projects__item-description">Описание проекта</p>
+                          <div class="projects__bottom-wrapper">
+                            <p class="projects__item-target">Назначение проекта</p>
+                            <p class="projects__item-address">Адрес проекта</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li class="projects__content-part projects__content-part--index">
-                  <div class="projects__wrap">
-                    <div class="projects__front">
-                      <div class="projects__inner projects__inner--front">
-                        <div class="projects__text-wrapper">
+                  <div class="projects__content-part projects__content-part--index">
+                    <div class="projects__wrap">
+                      <div class="projects__front">
+                        <div class="projects__inner projects__inner--front">
+                          <div class="projects__text-wrapper">
+                            <h3 class="projects__item-title">Ангар 5,5х7</h3>
+                            <p class="projects__item-subtitle">Адрес</p>
+                          </div>
+                          <div class="projects__picture-wrapper projects__picture-wrapper--angar5-7"></div>
+                        </div>
+                      </div>
+                      <div class="projects__back projects__back--angar5-7">
+                        <div class="projects__inner projects__inner--back">
                           <h3 class="projects__item-title">Ангар 5,5х7</h3>
-                          <p class="projects__item-subtitle">Адрес</p>
-                        </div>
-                        <div class="projects__picture-wrapper projects__picture-wrapper--angar5-7"></div>
-                      </div>
-                    </div>
-                    <div class="projects__back projects__back--angar5-7">
-                      <div class="projects__inner projects__inner--back">
-                        <h3 class="projects__item-title">Ангар 5,5х7</h3>
-                        <p class="projects__item-description">Описание проекта</p>
-                        <div class="projects__bottom-wrapper">
-                          <p class="projects__item-target">Назначение проекта</p>
-                          <p class="projects__item-address">Адрес проекта</p>
+                          <p class="projects__item-description">Описание проекта</p>
+                          <div class="projects__bottom-wrapper">
+                            <p class="projects__item-target">Назначение проекта</p>
+                            <p class="projects__item-address">Адрес проекта</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </li>
-              </ul>
+                </div>
+                <!--<div class="tabs__content-item projects__content-item" data-tabs="element">
+                  <div class="projects__content-part">
+                    <div class="projects__wrap">
+                      <div class="projects__front">
+                        <div class="projects__inner projects__inner--front">
+                          <div class="projects__text-wrapper">
+                            <h3 class="projects__item-title">Крым</h3>
+                            <p class="projects__item-subtitle">Адрес</p>
+                          </div>
+                          <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
+                        </div>
+                      </div>
+                      <div class="projects__back projects__back--krym">
+                        <div class="projects__inner projects__inner--back">
+                          <h3 class="projects__item-title">Крым</h3>
+                          <p class="projects__item-description">Описание проекта</p>
+                          <div class="projects__bottom-wrapper">
+                            <p class="projects__item-target">Назначение проекта</p>
+                            <p class="projects__item-address">Адрес проекта</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content-item projects__content-item" data-tabs="element">
+                  <div class="projects__content-part">
+                    <div class="projects__wrap">
+                      <div class="projects__front">
+                        <div class="projects__inner projects__inner--front">
+                          <div class="projects__text-wrapper">
+                            <h3 class="projects__item-title">Крым</h3>
+                            <p class="projects__item-subtitle">Адрес</p>
+                          </div>
+                          <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
+                        </div>
+                      </div>
+                      <div class="projects__back projects__back--krym">
+                        <div class="projects__inner projects__inner--back">
+                          <h3 class="projects__item-title">Крым</h3>
+                          <p class="projects__item-description">Описание проекта</p>
+                          <div class="projects__bottom-wrapper">
+                            <p class="projects__item-target">Назначение проекта</p>
+                            <p class="projects__item-address">Адрес проекта</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>-->
             </div>
           </div>
           <a class="projects__link" href="projects.html">Показать больше проектов</a>
@@ -1063,13 +1121,15 @@
         <h3 class="main-footer__title">Мы в социальных сетях</h3>
         <div class="main-footer__block-wrapper">
           <a class="main-footer__item main-footer__link" href="#">
-            <svg class="main-footer__icon icon icon--whatsapp" aria-hidden="true" focusable="false" width="32" height="32">
+            <svg class="main-footer__icon icon icon--whatsapp" aria-hidden="true" focusable="false" width="32"
+              height="32">
               <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
             </svg>
             <span class="main-footer__text">WhatsApp</span>
           </a>
           <a class="main-footer__item main-footer__link" href="#">
-            <svg class="main-footer__icon icon icon--telegram" aria-hidden="true" focusable="false" width="32" height="32">
+            <svg class="main-footer__icon icon icon--telegram" aria-hidden="true" focusable="false" width="32"
+              height="32">
               <use xlink:href="img/sprite.svg#icon-telegram"></use>
             </svg>
             <span class="main-footer__text">Telegram</span>
@@ -1078,6 +1138,7 @@
       </div>
     </div>
   </footer>
+  <script src="swiper/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

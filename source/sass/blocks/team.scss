@@ -2,6 +2,10 @@
 
 .team {
   position: relative;
+
+  .container {
+    display: grid;
+  }
 }
 
 .team__title {
@@ -21,6 +25,7 @@
 }
 
 .team__list {
+  position: relative;
   padding: 0;
   list-style: none;
   margin: 0 0 24px 0;
@@ -28,16 +33,33 @@
   @media (min-width: var.$tablet-width) {
     margin: 0 0 48px 0;
   }
+
+  .swiper-pagination {
+    bottom: 0;
+
+    @media (min-width: var.$desktop-width) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var.$atlantis;
+  }
+}
+
+.team__list.swiper {
+  min-width: 0;
 }
 
 .team__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &:not(:first-child) {
-    display: none;
-  }
 }
 
 .team__picture-wrapper {
@@ -81,12 +103,16 @@
 }
 
 .team__item-text {
-  margin: 0;
+  margin: 0 0 48px 0;
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
     font-size: 18px;
     line-height: 22px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0;
   }
 }
 
@@ -114,6 +140,7 @@
 .team__small-item {
   position: absolute;
   opacity: 0.6;
+  z-index: 3;
 
   &--first {
     top: 58px;

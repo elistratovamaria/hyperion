@@ -1,26 +1,14 @@
-@use "../global//variables.scss" as var;
+@use "../global/variables.scss" as var;
 
 .tabs__links {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 0 16px 0;
-  padding: 0;
-  list-style: none;
-  /*overflow: auto;
-  white-space: nowrap;*/
-
   @media (min-width: var.$tablet-width) {
     margin: 0 0 36px 0;
-  }
-}
-
-.tabs__links-item {
-  &:not(:last-child) {
-    margin: 0 12px 0 0;
-
-    @media (min-width: var.$tablet-width) {
-      margin: 0 24px 0 0;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    min-width: 0;
+    max-width: var.$desktop-width;
   }
 }
 
@@ -32,9 +20,14 @@
   color: rgba(var.$black, 0.4);
   transition: 0.3s ease;
 
-  &--active {
-    color: var.$atlantis;
+  &:not(:last-child) {
+    margin: 0 12px 0 0;
+
+    @media (min-width: var.$tablet-width) {
+      margin: 0 24px 0 0;
+    }
   }
+
 
   &:hover {
     opacity: 0.6;
@@ -48,4 +41,8 @@
     font-size: 18px;
     line-height: 22px;
   }
+}
+
+.tabs__link.is-active {
+  color: var.$atlantis;
 }
