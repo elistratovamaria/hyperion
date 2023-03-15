@@ -1,5 +1,9 @@
 @use "../global/variables.scss" as var;
 
+.tabs {
+  display: grid;
+}
+
 .tabs__links {
   @media (min-width: var.$tablet-width) {
     margin: 0 0 36px 0;
@@ -9,6 +13,25 @@
     list-style: none;
     min-width: 0;
     max-width: var.$desktop-width;
+  }
+}
+
+.tabs__links.swiper {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 0 16px 0;
+}
+
+.tabs__content.swiper {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .swiper-wrapper {
+    width: 100%;
   }
 }
 
@@ -43,6 +66,59 @@
   }
 }
 
+.tabs__link.swiper-slide {
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  height: 100%;
+  max-height: 100%;
+}
+
+.tabs__content-item.swiper-slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+
+  @media (min-width: var.$tablet-width) {
+    display: none;
+    pointer-events: none;
+    animation: tab-content 0.5s ease;
+  }
+}
+
+.tabs__content-item.is-active {
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    pointer-events: auto;
+
+    .tabs__content-part {
+      margin: 0;
+    }
+  }
+}
+
 .tabs__link.is-active {
   color: var.$atlantis;
+}
+
+.tabs__link.swiper-slide-active {
+  color: var.$atlantis;
+}
+
+.tabs__content-part {
+  margin: 0 0 24px 0;
+}
+
+@keyframes tab-content {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
