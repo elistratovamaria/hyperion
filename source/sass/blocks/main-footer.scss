@@ -82,7 +82,7 @@
   color: var.$black;
 
   &:not(:last-child) {
-    margin: 0 0 14px 0;
+    margin: 0 0 20px 0;
   }
 
   &--large-indent {
@@ -91,6 +91,22 @@
 
       @media (min-width: var.$tablet-width) {
         margin: 0 0 20px 0;
+      }
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    &:not(:last-child) {
+      margin: 0 0 14px 0;
+    }
+
+    &--large-indent {
+      &:not(:last-child) {
+        margin: 0 0 24px 0;
+
+        @media (min-width: var.$tablet-width) {
+          margin: 0 0 20px 0;
+        }
       }
     }
   }
@@ -116,6 +132,10 @@
 
   .main-footer__item {
     margin: 0;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    gap: 0;
   }
 }
 
