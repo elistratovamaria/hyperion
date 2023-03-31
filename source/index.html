@@ -652,8 +652,7 @@
             <div class="team__item swiper-slide">
               <div class="team__picture-wrapper">
                 <picture>
-                  <source type="image/webp"
-                    srcset="img/team/team-2-small@1x.webp 1x, img/team/team-2-small@2x.webp 2x">
+                  <source type="image/webp" srcset="img/team/team-2-small@1x.webp 1x, img/team/team-2-small@2x.webp 2x">
                   <img class="team__img" width="240" height="240" src="img/team/team-2-small@1x.png"
                     srcset="img/team/team-2-small@2x.png 2x" alt="Фото директора.">
                 </picture>
@@ -673,8 +672,7 @@
             <div class="team__item swiper-slide">
               <div class="team__picture-wrapper">
                 <picture>
-                  <source type="image/webp"
-                    srcset="img/team/team-3-small@1x.webp 1x, img/team/team-3-small@2x.webp 2x">
+                  <source type="image/webp" srcset="img/team/team-3-small@1x.webp 1x, img/team/team-3-small@2x.webp 2x">
                   <img class="team__img" width="240" height="240" src="img/team/team-3-small@1x.png"
                     srcset="img/team/team-3-small@2x.png 2x" alt="Фото директора.">
                 </picture>
@@ -691,8 +689,7 @@
             <div class="team__item swiper-slide">
               <div class="team__picture-wrapper">
                 <picture>
-                  <source type="image/webp"
-                    srcset="img/team/team-4-small@1x.webp 1x, img/team/team-4-small@2x.webp 2x">
+                  <source type="image/webp" srcset="img/team/team-4-small@1x.webp 1x, img/team/team-4-small@2x.webp 2x">
                   <img class="team__img" width="240" height="240" src="img/team/team-4-small@1x.png"
                     srcset="img/team/team-4-small@2x.png 2x" alt="Фото директора.">
                 </picture>
@@ -710,8 +707,7 @@
             <div class="team__item swiper-slide">
               <div class="team__picture-wrapper">
                 <picture>
-                  <source type="image/webp"
-                    srcset="img/team/team-5-small@1x.webp 1x, img/team/team-5-small@2x.webp 2x">
+                  <source type="image/webp" srcset="img/team/team-5-small@1x.webp 1x, img/team/team-5-small@2x.webp 2x">
                   <img class="team__img" width="240" height="240" src="img/team/team-5-small@1x.png"
                     srcset="img/team/team-5-small@2x.png 2x" alt="Фото директора.">
                 </picture>
@@ -730,8 +726,7 @@
             <div class="team__item swiper-slide">
               <div class="team__picture-wrapper">
                 <picture>
-                  <source type="image/webp"
-                    srcset="img/team/team-6-small@1x.webp 1x, img/team/team-6-small@2x.webp 2x">
+                  <source type="image/webp" srcset="img/team/team-6-small@1x.webp 1x, img/team/team-6-small@2x.webp 2x">
                   <img class="team__img" width="240" height="240" src="img/team/team-6-small@1x.png"
                     srcset="img/team/team-6-small@2x.png 2x" alt="Фото директора.">
                 </picture>
@@ -799,202 +794,200 @@
       <div class="container">
         <div class="projects__wrapper">
           <h2 class="projects__title projects__title--index">Наши проекты</h2>
-          <div class="projects__tabs tabs">
-            <div class="tabs__links swiper">
+          <div class="projects__tabs tabs" data-tabs="parent">
+            <div class="tabs__links swiper" data-tabs="controls">
               <div class="swiper-wrapper">
-                <button class="tabs__link swiper-slide is-active" data-tabs="tab-1" type="button">Все наши
+                <button class="tabs__link swiper-slide" type="button" data-tabs="control">Все наши
                   проекты</button>
-                <button class="tabs__link swiper-slide" data-tabs="tab-2" type="button">Промышленные здания</button>
-                <button class="tabs__link swiper-slide" data-tabs="tab-3" type="button">Офисы</button>
+                <button class="tabs__link swiper-slide" type="button" data-tabs="control">Промышленные здания</button>
+                <button class="tabs__link swiper-slide" type="button" data-tabs="control">Офисы</button>
               </div>
             </div>
-            <div class="tabs__content projects__content swiper" data-tabs="content">
-              <div class="swiper-wrapper">
-                <div class="tabs__content-item projects__content-item swiper-slide is-active" id="tab-1" data-tabs="element">
-                  <div class="projects__content-part tabs__content-part">
-                    <div class="projects__wrap">
-                      <div class="projects__front">
-                        <div class="projects__inner projects__inner--front">
-                          <div class="projects__text-wrapper">
-                            <h3 class="projects__item-title">Крым</h3>
-                            <p class="projects__item-subtitle">Адрес проекта</p>
-                          </div>
-                          <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
-                        </div>
-                      </div>
-                      <div class="projects__back projects__back--krym">
-                        <div class="projects__inner projects__inner--back">
+            <div class="tabs__content projects__content" data-tabs="content">
+              <div class="tabs__content-item projects__content-item" data-tabs="element">
+                <div class="projects__content-part tabs__content-part">
+                  <div class="projects__wrap">
+                    <div class="projects__front">
+                      <div class="projects__inner projects__inner--front">
+                        <div class="projects__text-wrapper">
                           <h3 class="projects__item-title">Крым</h3>
-                          <p class="projects__item-description">Описание проекта</p>
-                          <div class="projects__bottom-wrapper">
-                            <p class="projects__item-target">Назначение проекта</p>
-                            <p class="projects__item-address">Адрес проекта</p>
-                          </div>
+                          <p class="projects__item-subtitle">Адрес проекта</p>
+                        </div>
+                        <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
+                      </div>
+                    </div>
+                    <div class="projects__back projects__back--krym">
+                      <div class="projects__inner projects__inner--back">
+                        <h3 class="projects__item-title">Крым</h3>
+                        <p class="projects__item-description">Описание проекта</p>
+                        <div class="projects__bottom-wrapper">
+                          <p class="projects__item-target">Назначение проекта</p>
+                          <p class="projects__item-address">Адрес проекта</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="projects__content-part tabs__content-part">
-                    <div class="projects__wrap">
-                      <div class="projects__front">
-                        <div class="projects__inner projects__inner--front">
-                          <div class="projects__text-wrapper">
-                            <h3 class="projects__item-title">Магадан</h3>
-                            <p class="projects__item-subtitle">Адрес проекта</p>
-                          </div>
-                          <div class="projects__picture-wrapper projects__picture-wrapper--magadan"></div>
-                        </div>
-                      </div>
-                      <div class="projects__back projects__back--magadan">
-                        <div class="projects__inner projects__inner--back">
+                </div>
+                <div class="projects__content-part tabs__content-part">
+                  <div class="projects__wrap">
+                    <div class="projects__front">
+                      <div class="projects__inner projects__inner--front">
+                        <div class="projects__text-wrapper">
                           <h3 class="projects__item-title">Магадан</h3>
-                          <p class="projects__item-description">Описание проекта</p>
-                          <div class="projects__bottom-wrapper">
-                            <p class="projects__item-target">Назначение проекта</p>
-                            <p class="projects__item-address">Адрес проекта</p>
-                          </div>
+                          <p class="projects__item-subtitle">Адрес проекта</p>
+                        </div>
+                        <div class="projects__picture-wrapper projects__picture-wrapper--magadan"></div>
+                      </div>
+                    </div>
+                    <div class="projects__back projects__back--magadan">
+                      <div class="projects__inner projects__inner--back">
+                        <h3 class="projects__item-title">Магадан</h3>
+                        <p class="projects__item-description">Описание проекта</p>
+                        <div class="projects__bottom-wrapper">
+                          <p class="projects__item-target">Назначение проекта</p>
+                          <p class="projects__item-address">Адрес проекта</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="projects__content-part projects__content-part--index tabs__content-part">
-                    <div class="projects__wrap">
-                      <div class="projects__front">
-                        <div class="projects__inner projects__inner--front">
-                          <div class="projects__text-wrapper">
-                            <h3 class="projects__item-title">Ангар на колесах</h3>
-                            <p class="projects__item-subtitle">Адрес проекта</p>
-                          </div>
-                          <div class="projects__picture-wrapper projects__picture-wrapper--angar-wheel"></div>
-                        </div>
-                      </div>
-                      <div class="projects__back projects__back--angar-wheel">
-                        <div class="projects__inner projects__inner--back">
+                </div>
+                <div class="projects__content-part projects__content-part--index tabs__content-part">
+                  <div class="projects__wrap">
+                    <div class="projects__front">
+                      <div class="projects__inner projects__inner--front">
+                        <div class="projects__text-wrapper">
                           <h3 class="projects__item-title">Ангар на колесах</h3>
-                          <p class="projects__item-description">Описание проекта</p>
-                          <div class="projects__bottom-wrapper">
-                            <p class="projects__item-target">Назначение проекта</p>
-                            <p class="projects__item-address">Адрес проекта</p>
-                          </div>
+                          <p class="projects__item-subtitle">Адрес проекта</p>
+                        </div>
+                        <div class="projects__picture-wrapper projects__picture-wrapper--angar-wheel"></div>
+                      </div>
+                    </div>
+                    <div class="projects__back projects__back--angar-wheel">
+                      <div class="projects__inner projects__inner--back">
+                        <h3 class="projects__item-title">Ангар на колесах</h3>
+                        <p class="projects__item-description">Описание проекта</p>
+                        <div class="projects__bottom-wrapper">
+                          <p class="projects__item-target">Назначение проекта</p>
+                          <p class="projects__item-address">Адрес проекта</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="projects__content-part projects__content-part--index tabs__content-part">
-                    <div class="projects__wrap">
-                      <div class="projects__front">
-                        <div class="projects__inner projects__inner--front">
-                          <div class="projects__text-wrapper">
-                            <h3 class="projects__item-title">Проект Ангара<br>Казахстан</h3>
-                            <p class="projects__item-subtitle">Адрес проекта</p>
-                          </div>
-                          <div class="projects__picture-wrapper projects__picture-wrapper--angar-project-kaz"></div>
-                        </div>
-                      </div>
-                      <div class="projects__back projects__back--angar-project-kaz">
-                        <div class="projects__inner projects__inner--back">
+                </div>
+                <div class="projects__content-part projects__content-part--index tabs__content-part">
+                  <div class="projects__wrap">
+                    <div class="projects__front">
+                      <div class="projects__inner projects__inner--front">
+                        <div class="projects__text-wrapper">
                           <h3 class="projects__item-title">Проект Ангара<br>Казахстан</h3>
-                          <p class="projects__item-description">Описание проекта</p>
-                          <div class="projects__bottom-wrapper">
-                            <p class="projects__item-target">Назначение проекта</p>
-                            <p class="projects__item-address">Адрес проекта</p>
-                          </div>
+                          <p class="projects__item-subtitle">Адрес проекта</p>
+                        </div>
+                        <div class="projects__picture-wrapper projects__picture-wrapper--angar-project-kaz"></div>
+                      </div>
+                    </div>
+                    <div class="projects__back projects__back--angar-project-kaz">
+                      <div class="projects__inner projects__inner--back">
+                        <h3 class="projects__item-title">Проект Ангара<br>Казахстан</h3>
+                        <p class="projects__item-description">Описание проекта</p>
+                        <div class="projects__bottom-wrapper">
+                          <p class="projects__item-target">Назначение проекта</p>
+                          <p class="projects__item-address">Адрес проекта</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="projects__content-part tabs__content-part">
-                    <div class="projects__wrap">
-                      <div class="projects__front">
-                        <div class="projects__inner projects__inner--front">
-                          <div class="projects__text-wrapper">
-                            <h3 class="projects__item-title">Pavlotti</h3>
-                            <p class="projects__item-subtitle">Адрес проекта</p>
-                          </div>
-                          <div class="projects__picture-wrapper projects__picture-wrapper--pavlotti"></div>
-                        </div>
-                      </div>
-                      <div class="projects__back projects__back--pavlotti">
-                        <div class="projects__inner projects__inner--back">
+                </div>
+                <div class="projects__content-part tabs__content-part">
+                  <div class="projects__wrap">
+                    <div class="projects__front">
+                      <div class="projects__inner projects__inner--front">
+                        <div class="projects__text-wrapper">
                           <h3 class="projects__item-title">Pavlotti</h3>
-                          <p class="projects__item-description">Описание проекта</p>
-                          <div class="projects__bottom-wrapper">
-                            <p class="projects__item-target">Назначение проекта</p>
-                            <p class="projects__item-address">Адрес проекта</p>
-                          </div>
+                          <p class="projects__item-subtitle">Адрес проекта</p>
+                        </div>
+                        <div class="projects__picture-wrapper projects__picture-wrapper--pavlotti"></div>
+                      </div>
+                    </div>
+                    <div class="projects__back projects__back--pavlotti">
+                      <div class="projects__inner projects__inner--back">
+                        <h3 class="projects__item-title">Pavlotti</h3>
+                        <p class="projects__item-description">Описание проекта</p>
+                        <div class="projects__bottom-wrapper">
+                          <p class="projects__item-target">Назначение проекта</p>
+                          <p class="projects__item-address">Адрес проекта</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="projects__content-part projects__content-part--index tabs__content-part">
-                    <div class="projects__wrap">
-                      <div class="projects__front">
-                        <div class="projects__inner projects__inner--front">
-                          <div class="projects__text-wrapper">
-                            <h3 class="projects__item-title">Ангар 5,5х7</h3>
-                            <p class="projects__item-subtitle">Адрес проекта</p>
-                          </div>
-                          <div class="projects__picture-wrapper projects__picture-wrapper--angar5-7"></div>
-                        </div>
-                      </div>
-                      <div class="projects__back projects__back--angar5-7">
-                        <div class="projects__inner projects__inner--back">
+                </div>
+                <div class="projects__content-part projects__content-part--index tabs__content-part">
+                  <div class="projects__wrap">
+                    <div class="projects__front">
+                      <div class="projects__inner projects__inner--front">
+                        <div class="projects__text-wrapper">
                           <h3 class="projects__item-title">Ангар 5,5х7</h3>
-                          <p class="projects__item-description">Описание проекта</p>
-                          <div class="projects__bottom-wrapper ">
-                            <p class="projects__item-target">Назначение проекта</p>
-                            <p class="projects__item-address">Адрес проекта</p>
-                          </div>
+                          <p class="projects__item-subtitle">Адрес проекта</p>
+                        </div>
+                        <div class="projects__picture-wrapper projects__picture-wrapper--angar5-7"></div>
+                      </div>
+                    </div>
+                    <div class="projects__back projects__back--angar5-7">
+                      <div class="projects__inner projects__inner--back">
+                        <h3 class="projects__item-title">Ангар 5,5х7</h3>
+                        <p class="projects__item-description">Описание проекта</p>
+                        <div class="projects__bottom-wrapper ">
+                          <p class="projects__item-target">Назначение проекта</p>
+                          <p class="projects__item-address">Адрес проекта</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="tabs__content-item projects__content-item swiper-slide" id="tab-2" data-tabs="element">
-                  <div class="projects__content-part tabs__content-part">
-                    <div class="projects__wrap">
-                      <div class="projects__front">
-                        <div class="projects__inner projects__inner--front">
-                          <div class="projects__text-wrapper">
-                            <h3 class="projects__item-title">Крым</h3>
-                            <p class="projects__item-subtitle">Адрес</p>
-                          </div>
-                          <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
-                        </div>
-                      </div>
-                      <div class="projects__back projects__back--krym">
-                        <div class="projects__inner projects__inner--back">
+              </div>
+              <div class="tabs__content-item projects__content-item" data-tabs="element">
+                <div class="projects__content-part tabs__content-part">
+                  <div class="projects__wrap">
+                    <div class="projects__front">
+                      <div class="projects__inner projects__inner--front">
+                        <div class="projects__text-wrapper">
                           <h3 class="projects__item-title">Крым</h3>
-                          <p class="projects__item-description">Описание проекта</p>
-                          <div class="projects__bottom-wrapper">
-                            <p class="projects__item-target">Назначение проекта</p>
-                            <p class="projects__item-address">Адрес проекта</p>
-                          </div>
+                          <p class="projects__item-subtitle">Адрес</p>
+                        </div>
+                        <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
+                      </div>
+                    </div>
+                    <div class="projects__back projects__back--krym">
+                      <div class="projects__inner projects__inner--back">
+                        <h3 class="projects__item-title">Крым</h3>
+                        <p class="projects__item-description">Описание проекта</p>
+                        <div class="projects__bottom-wrapper">
+                          <p class="projects__item-target">Назначение проекта</p>
+                          <p class="projects__item-address">Адрес проекта</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="tabs__content-item projects__content-item swiper-slide" id="tab-3" data-tabs="element">
-                  <div class="projects__content-part tabs__content-part">
-                    <div class="projects__wrap">
-                      <div class="projects__front">
-                        <div class="projects__inner projects__inner--front">
-                          <div class="projects__text-wrapper">
-                            <h3 class="projects__item-title">Крым</h3>
-                            <p class="projects__item-subtitle">Адрес</p>
-                          </div>
-                          <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
-                        </div>
-                      </div>
-                      <div class="projects__back projects__back--krym">
-                        <div class="projects__inner projects__inner--back">
+              </div>
+              <div class="tabs__content-item projects__content-item" data-tabs="element">
+                <div class="projects__content-part tabs__content-part">
+                  <div class="projects__wrap">
+                    <div class="projects__front">
+                      <div class="projects__inner projects__inner--front">
+                        <div class="projects__text-wrapper">
                           <h3 class="projects__item-title">Крым</h3>
-                          <p class="projects__item-description">Описание проекта</p>
-                          <div class="projects__bottom-wrapper">
-                            <p class="projects__item-target">Назначение проекта</p>
-                            <p class="projects__item-address">Адрес проекта</p>
-                          </div>
+                          <p class="projects__item-subtitle">Адрес</p>
+                        </div>
+                        <div class="projects__picture-wrapper projects__picture-wrapper--krym"></div>
+                      </div>
+                    </div>
+                    <div class="projects__back projects__back--krym">
+                      <div class="projects__inner projects__inner--back">
+                        <h3 class="projects__item-title">Крым</h3>
+                        <p class="projects__item-description">Описание проекта</p>
+                        <div class="projects__bottom-wrapper">
+                          <p class="projects__item-target">Назначение проекта</p>
+                          <p class="projects__item-address">Адрес проекта</p>
                         </div>
                       </div>
                     </div>
@@ -1002,9 +995,10 @@
                 </div>
               </div>
             </div>
-            <a class="projects__link" href="projects.html">Показать больше проектов</a>
           </div>
+          <a class="projects__link" href="projects.html">Показать больше проектов</a>
         </div>
+      </div>
     </section>
     <section class="contacts">
       <form class="contacts__form small-form" action="#" method="post">
