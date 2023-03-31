@@ -119,6 +119,7 @@
 .team__img {
   border-radius: 50%;
   box-shadow: 0 4px 25px rgba(var.$black, 0.18);
+  outline: 6px solid var.$white;
 
   @media (min-width: var.$tablet-width) {
     width: 320px;
@@ -144,32 +145,32 @@
 
   &--first {
     top: 58px;
-    right: 635px;
+    right: 400px;
   }
 
   &--second {
     top: 225px;
-    right: 400px;
+    right: 160px;
   }
 
   &--third {
     top: 400px;
-    right: 520px;
+    right: 275px;
   }
 
   &--fourth {
     top: 400px;
-    left: 520px;
+    left: 275px;
   }
 
   &--fifth {
     top: 225px;
-    left: 400px;
+    left: 160px;
   }
 
   &--sixth {
     top: 60px;
-    left: 635px;
+    left: 400px;
   }
 }
 
